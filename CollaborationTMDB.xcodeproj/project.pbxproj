@@ -21,7 +21,28 @@
 		7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D32CB532B700F7E6A7 /* e.swift */; };
 		7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D52CB532BB00F7E6A7 /* f.swift */; };
 		7B5A94D82CB532C000F7E6A7 /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D72CB532C000F7E6A7 /* g.swift */; };
+		7B5A94DB2CB5380100F7E6A7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; };
+		7B5A94DE2CB5380D00F7E6A7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DD2CB5380D00F7E6A7 /* Kingfisher */; };
+		7B5A94E12CB5382600F7E6A7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E02CB5382600F7E6A7 /* Moya */; };
+		7B5A94E42CB5384D00F7E6A7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E32CB5384D00F7E6A7 /* SnapKit */; };
+		7B5A94E72CB5386A00F7E6A7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E62CB5386A00F7E6A7 /* RxCocoa */; };
+		7B5A94E92CB5386A00F7E6A7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E82CB5386A00F7E6A7 /* RxSwift */; };
+		7B5A94EA2CB5388400F7E6A7 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B5A94EB2CB5388400F7E6A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7B5A94EA2CB5388400F7E6A7 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7B5A94A82CB5259500F7E6A7 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollaborationTMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5A94E92CB5386A00F7E6A7 /* RxSwift in Frameworks */,
+				7B5A94DE2CB5380D00F7E6A7 /* Kingfisher in Frameworks */,
+				7B5A94E42CB5384D00F7E6A7 /* SnapKit in Frameworks */,
+				7B5A94E72CB5386A00F7E6A7 /* RxCocoa in Frameworks */,
+				7B5A94DB2CB5380100F7E6A7 /* RealmSwift in Frameworks */,
+				7B5A94E12CB5382600F7E6A7 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +192,21 @@
 				7B5A94A42CB5259500F7E6A7 /* Sources */,
 				7B5A94A52CB5259500F7E6A7 /* Frameworks */,
 				7B5A94A62CB5259500F7E6A7 /* Resources */,
+				7B5A94EB2CB5388400F7E6A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CollaborationTMDB;
+			packageProductDependencies = (
+				7B5A94DA2CB5380100F7E6A7 /* RealmSwift */,
+				7B5A94DD2CB5380D00F7E6A7 /* Kingfisher */,
+				7B5A94E02CB5382600F7E6A7 /* Moya */,
+				7B5A94E32CB5384D00F7E6A7 /* SnapKit */,
+				7B5A94E62CB5386A00F7E6A7 /* RxCocoa */,
+				7B5A94E82CB5386A00F7E6A7 /* RxSwift */,
+			);
 			productName = CollaborationTMDB;
 			productReference = 7B5A94A82CB5259500F7E6A7 /* CollaborationTMDB.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +235,13 @@
 				Base,
 			);
 			mainGroup = 7B5A949F2CB5259500F7E6A7;
+			packageReferences = (
+				7B5A94D92CB5380100F7E6A7 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				7B5A94DC2CB5380D00F7E6A7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7B5A94DF2CB5382600F7E6A7 /* XCRemoteSwiftPackageReference "Moya" */,
+				7B5A94E22CB5384D00F7E6A7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7B5A94E52CB5386A00F7E6A7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 7B5A94A92CB5259500F7E6A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -461,6 +504,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B5A94D92CB5380100F7E6A7 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7B5A94DC2CB5380D00F7E6A7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.3;
+			};
+		};
+		7B5A94DF2CB5382600F7E6A7 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		7B5A94E22CB5384D00F7E6A7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		7B5A94E52CB5386A00F7E6A7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B5A94DA2CB5380100F7E6A7 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94D92CB5380100F7E6A7 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		7B5A94DD2CB5380D00F7E6A7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94DC2CB5380D00F7E6A7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		7B5A94E02CB5382600F7E6A7 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94DF2CB5382600F7E6A7 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		7B5A94E32CB5384D00F7E6A7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94E22CB5384D00F7E6A7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7B5A94E62CB5386A00F7E6A7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94E52CB5386A00F7E6A7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7B5A94E82CB5386A00F7E6A7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5A94E52CB5386A00F7E6A7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B5A94A02CB5259500F7E6A7 /* Project object */;
 }
