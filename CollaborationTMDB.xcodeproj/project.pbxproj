@@ -13,7 +13,6 @@
 		7B5A94B52CB5259600F7E6A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */; };
 		7B5A94B82CB5259600F7E6A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B72CB5259600F7E6A7 /* Base */; };
 		7B5A94C02CB525BE00F7E6A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94BF2CB525BE00F7E6A7 /* .gitignore */; };
-		7B5A94C22CB5269600F7E6A7 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94C12CB5269600F7E6A7 /* APIKEY.swift */; };
 		7B5A94CC2CB5329F00F7E6A7 /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CB2CB5329F00F7E6A7 /* a.swift */; };
 		7B5A94CE2CB532A900F7E6A7 /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CD2CB532A900F7E6A7 /* b.swift */; };
 		7B5A94D02CB532AC00F7E6A7 /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CF2CB532AC00F7E6A7 /* c.swift */; };
@@ -28,6 +27,9 @@
 		7B5A94E72CB5386A00F7E6A7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E62CB5386A00F7E6A7 /* RxCocoa */; };
 		7B5A94E92CB5386A00F7E6A7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E82CB5386A00F7E6A7 /* RxSwift */; };
 		7B5A94EA2CB5388400F7E6A7 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		81B18BA22CB54904001979F5 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA12CB54904001979F5 /* APIKEY.swift */; };
+		81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA32CB5493B001979F5 /* RoundedButton.swift */; };
+		81B18BA62CB551F3001979F5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA52CB551F3001979F5 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +55,6 @@
 		7B5A94B72CB5259600F7E6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B5A94B92CB5259600F7E6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5A94BF2CB525BE00F7E6A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7B5A94C12CB5269600F7E6A7 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		7B5A94CB2CB5329F00F7E6A7 /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
 		7B5A94CD2CB532A900F7E6A7 /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
 		7B5A94CF2CB532AC00F7E6A7 /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
@@ -61,6 +62,9 @@
 		7B5A94D32CB532B700F7E6A7 /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
 		7B5A94D52CB532BB00F7E6A7 /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
 		7B5A94D72CB532C000F7E6A7 /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
+		81B18BA12CB54904001979F5 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
+		81B18BA32CB5493B001979F5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		81B18BA52CB551F3001979F5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +113,11 @@
 				7B5A94C52CB526DA00F7E6A7 /* Scene */,
 				7B5A94C42CB526D800F7E6A7 /* Utility */,
 				7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */,
+				81B18BA52CB551F3001979F5 /* TestViewController.swift */,
 				7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */,
 				7B5A94B62CB5259600F7E6A7 /* LaunchScreen.storyboard */,
 				7B5A94B92CB5259600F7E6A7 /* Info.plist */,
-				7B5A94C12CB5269600F7E6A7 /* APIKEY.swift */,
+				81B18BA12CB54904001979F5 /* APIKEY.swift */,
 			);
 			path = CollaborationTMDB;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7B5A94D32CB532B700F7E6A7 /* e.swift */,
+				81B18BA32CB5493B001979F5 /* RoundedButton.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -274,11 +280,13 @@
 				7B5A94B02CB5259500F7E6A7 /* ViewController.swift in Sources */,
 				7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */,
 				7B5A94D02CB532AC00F7E6A7 /* c.swift in Sources */,
-				7B5A94C22CB5269600F7E6A7 /* APIKEY.swift in Sources */,
+				81B18BA62CB551F3001979F5 /* TestViewController.swift in Sources */,
 				7B5A94CC2CB5329F00F7E6A7 /* a.swift in Sources */,
 				7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */,
+				81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */,
 				7B5A94D22CB532B000F7E6A7 /* d.swift in Sources */,
 				7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */,
+				81B18BA22CB54904001979F5 /* APIKEY.swift in Sources */,
 				7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
