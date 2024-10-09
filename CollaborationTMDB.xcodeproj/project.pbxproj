@@ -14,13 +14,9 @@
 		7B5A94B82CB5259600F7E6A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B72CB5259600F7E6A7 /* Base */; };
 		7B5A94C02CB525BE00F7E6A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94BF2CB525BE00F7E6A7 /* .gitignore */; };
 		7B5A94C22CB5269600F7E6A7 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94C12CB5269600F7E6A7 /* APIKEY.swift */; };
-		7B5A94CC2CB5329F00F7E6A7 /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CB2CB5329F00F7E6A7 /* a.swift */; };
 		7B5A94CE2CB532A900F7E6A7 /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CD2CB532A900F7E6A7 /* b.swift */; };
-		7B5A94D02CB532AC00F7E6A7 /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CF2CB532AC00F7E6A7 /* c.swift */; };
-		7B5A94D22CB532B000F7E6A7 /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D12CB532B000F7E6A7 /* d.swift */; };
 		7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D32CB532B700F7E6A7 /* e.swift */; };
 		7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D52CB532BB00F7E6A7 /* f.swift */; };
-		7B5A94D82CB532C000F7E6A7 /* g.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D72CB532C000F7E6A7 /* g.swift */; };
 		7B5A94DB2CB5380100F7E6A7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; };
 		7B5A94DE2CB5380D00F7E6A7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DD2CB5380D00F7E6A7 /* Kingfisher */; };
 		7B5A94E12CB5382600F7E6A7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94E02CB5382600F7E6A7 /* Moya */; };
@@ -76,13 +72,9 @@
 		7B5A94B92CB5259600F7E6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5A94BF2CB525BE00F7E6A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7B5A94C12CB5269600F7E6A7 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
-		7B5A94CB2CB5329F00F7E6A7 /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
 		7B5A94CD2CB532A900F7E6A7 /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
-		7B5A94CF2CB532AC00F7E6A7 /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
-		7B5A94D12CB532B000F7E6A7 /* d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
 		7B5A94D32CB532B700F7E6A7 /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
 		7B5A94D52CB532BB00F7E6A7 /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
-		7B5A94D72CB532C000F7E6A7 /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
 		7B5A94EC2CB539BC00F7E6A7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7B5A94EE2CB539CB00F7E6A7 /* TMDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBRepository.swift; sourceTree = "<group>"; };
 		7B5A94F02CB539D500F7E6A7 /* TMDBHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBHeader.swift; sourceTree = "<group>"; };
@@ -173,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				7B5A95092CB5406700F7E6A7 /* Extension */,
-				7B5A94D72CB532C000F7E6A7 /* g.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -197,7 +188,6 @@
 		7B5A94C72CB526E000F7E6A7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				7B5A94D12CB532B000F7E6A7 /* d.swift */,
 				7B5A94F42CB53A0400F7E6A7 /* MovieTable.swift */,
 				7B5A94F62CB53A0F00F7E6A7 /* DatabaseRepository.swift */,
 				7B5A94F82CB53A5900F7E6A7 /* ImageFileManager.swift */,
@@ -208,7 +198,6 @@
 		7B5A94C82CB526E200F7E6A7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7B5A94CF2CB532AC00F7E6A7 /* c.swift */,
 				7B5A94F22CB539DD00F7E6A7 /* TMDBRouter.swift */,
 				7B5A94F02CB539D500F7E6A7 /* TMDBHeader.swift */,
 				7B5A94EE2CB539CB00F7E6A7 /* TMDBRepository.swift */,
@@ -227,7 +216,6 @@
 				7B5A94FC2CB53A9B00F7E6A7 /* Similar */,
 				7B5A94FB2CB53A9600F7E6A7 /* Cast */,
 				7B5A94FA2CB53A9300F7E6A7 /* Genre */,
-				7B5A94CB2CB5329F00F7E6A7 /* a.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,7 +412,6 @@
 				7B5A95152CB62BDA00F7E6A7 /* TMDBTVResponseDTO.swift in Sources */,
 				7B5A951F2CB62E3900F7E6A7 /* SimilarRequestDTO+Mapping.swift in Sources */,
 				7B5A95112CB628D100F7E6A7 /* SearchMovieResponseDTO.swift in Sources */,
-				7B5A94D82CB532C000F7E6A7 /* g.swift in Sources */,
 				7B5A950F2CB628BE00F7E6A7 /* SearchMovieRequestDTO+Mapping.swift in Sources */,
 				7B5A950B2CB5407000F7E6A7 /* JSONEncoder+.swift in Sources */,
 				7B5A94CE2CB532A900F7E6A7 /* b.swift in Sources */,
@@ -440,12 +427,9 @@
 				7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */,
 				7B5A94F72CB53A0F00F7E6A7 /* DatabaseRepository.swift in Sources */,
 				7B5A950D2CB626F100F7E6A7 /* TMDBMovieResponse.swift in Sources */,
-				7B5A94D02CB532AC00F7E6A7 /* c.swift in Sources */,
 				7B5A94C22CB5269600F7E6A7 /* APIKEY.swift in Sources */,
 				7B5A95132CB62A7E00F7E6A7 /* TrendingRequestDTO+Mapping.swift in Sources */,
-				7B5A94CC2CB5329F00F7E6A7 /* a.swift in Sources */,
 				7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */,
-				7B5A94D22CB532B000F7E6A7 /* d.swift in Sources */,
 				7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */,
 				7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */,
 			);
