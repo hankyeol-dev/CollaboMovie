@@ -29,10 +29,10 @@
 		7B5A94EA2CB5388400F7E6A7 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		81B18BA22CB54904001979F5 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA12CB54904001979F5 /* APIKEY.swift */; };
 		81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA32CB5493B001979F5 /* RoundedButton.swift */; };
-		81B18BA62CB551F3001979F5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA52CB551F3001979F5 /* TestViewController.swift */; };
 		81B18BA82CB556B5001979F5 /* ThumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA72CB556B5001979F5 /* ThumbnailTableViewCell.swift */; };
 		81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA92CB5580D001979F5 /* +UIView.swift */; };
 		81B18BAC2CB55882001979F5 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BAB2CB55882001979F5 /* BaseTableViewCell.swift */; };
+		81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BC52CB69BE5001979F5 /* HomePosterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,10 +67,10 @@
 		7B5A94D72CB532C000F7E6A7 /* g.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = g.swift; sourceTree = "<group>"; };
 		81B18BA12CB54904001979F5 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		81B18BA32CB5493B001979F5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		81B18BA52CB551F3001979F5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		81B18BA72CB556B5001979F5 /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
 		81B18BA92CB5580D001979F5 /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
 		81B18BAB2CB55882001979F5 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		81B18BC52CB69BE5001979F5 /* HomePosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePosterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 				7B5A94C52CB526DA00F7E6A7 /* Scene */,
 				7B5A94C42CB526D800F7E6A7 /* Utility */,
 				7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */,
-				81B18BA52CB551F3001979F5 /* TestViewController.swift */,
 				7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */,
 				7B5A94B62CB5259600F7E6A7 /* LaunchScreen.storyboard */,
 				7B5A94B92CB5259600F7E6A7 /* Info.plist */,
@@ -149,6 +148,7 @@
 		7B5A94C52CB526DA00F7E6A7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				81B18BC72CB69BF6001979F5 /* Home */,
 				7B5A94D52CB532BB00F7E6A7 /* f.swift */,
 			);
 			path = Scene;
@@ -195,6 +195,22 @@
 				7B5A94AD2CB5259500F7E6A7 /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		81B18BC72CB69BF6001979F5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				81B18BC82CB69BF9001979F5 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		81B18BC82CB69BF9001979F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81B18BC52CB69BE5001979F5 /* HomePosterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +306,7 @@
 				7B5A94B02CB5259500F7E6A7 /* ViewController.swift in Sources */,
 				7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */,
 				7B5A94D02CB532AC00F7E6A7 /* c.swift in Sources */,
-				81B18BA62CB551F3001979F5 /* TestViewController.swift in Sources */,
+				81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */,
 				81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */,
 				7B5A94CC2CB5329F00F7E6A7 /* a.swift in Sources */,
 				7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */,

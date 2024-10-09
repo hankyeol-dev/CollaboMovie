@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
+// TODO: 실제 ResponseDTO와 타입 합칠 필요 있음
 struct MovieModel: Decodable {
    var path: String
    var title: String
