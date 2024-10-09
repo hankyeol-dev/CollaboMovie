@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TMDBTVResponseDTO: Decodable {
+struct TMDBTVResponse: Decodable {
     let backdropPath: String // 옵셔널
     let id: Int
     let name: String // 옵셔널
