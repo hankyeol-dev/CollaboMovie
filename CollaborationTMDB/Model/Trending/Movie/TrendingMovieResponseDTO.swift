@@ -13,4 +13,7 @@ struct TrendingMovieResponseDTO: Decodable {
 
 extension TrendingMovieResponseDTO {
     // TODO: Mapping Property
+    func toHomeMovies() -> [HomeMovie] {
+        return self.results.map { $0.toHomeMovie() }
+    }
 }
