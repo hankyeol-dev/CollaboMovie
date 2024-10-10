@@ -44,6 +44,7 @@
 		7B5A95232CB62EC700F7E6A7 /* SimilarTVResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A95222CB62EC700F7E6A7 /* SimilarTVResponseDTO.swift */; };
 		7B5A95252CB62FC700F7E6A7 /* CreditRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A95242CB62FC700F7E6A7 /* CreditRequestDTO+Mapping.swift */; };
 		7B5A95272CB630E800F7E6A7 /* CreditResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A95262CB630E800F7E6A7 /* CreditResponseDTO.swift */; };
+		811986902CB7A2CC00CF7CF5 /* +UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119868F2CB7A2CC00CF7CF5 /* +UIImage.swift */; };
 		81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA32CB5493B001979F5 /* RoundedButton.swift */; };
 		81B18BA82CB556B5001979F5 /* ThumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA72CB556B5001979F5 /* ThumbnailTableViewCell.swift */; };
 		81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA92CB5580D001979F5 /* +UIView.swift */; };
@@ -100,6 +101,8 @@
 		7B5A95222CB62EC700F7E6A7 /* SimilarTVResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarTVResponseDTO.swift; sourceTree = "<group>"; };
 		7B5A95242CB62FC700F7E6A7 /* CreditRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
 		7B5A95262CB630E800F7E6A7 /* CreditResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditResponseDTO.swift; sourceTree = "<group>"; };
+		8119868C2CB797B600CF7CF5 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CollaborationTMDB.app; path = "/Users/hankyeol-dev/lab/ios-project/CollaborationTMDB/build/Debug-iphoneos/CollaborationTMDB.app"; sourceTree = "<absolute>"; };
+		8119868F2CB7A2CC00CF7CF5 /* +UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIImage.swift"; sourceTree = "<group>"; };
 		81B18BA32CB5493B001979F5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		81B18BA72CB556B5001979F5 /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
 		81B18BA92CB5580D001979F5 /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
@@ -108,7 +111,6 @@
 		D42D41312CB75CA600582494 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCollectionViewCell.swift; sourceTree = "<group>"; };
 		D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
-		D42D41372CB78E8400582494 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CollaborationTMDB.app; path = "/Users/joh/Desktop/tmdb/build/Debug-iphoneos/CollaborationTMDB.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 			children = (
 				81B18BA92CB5580D001979F5 /* +UIView.swift */,
 				7B5A950A2CB5407000F7E6A7 /* JSONEncoder+.swift */,
+				8119868F2CB7A2CC00CF7CF5 /* +UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -367,7 +370,7 @@
 				7B5A94E82CB5386A00F7E6A7 /* RxSwift */,
 			);
 			productName = CollaborationTMDB;
-			productReference = D42D41372CB78E8400582494 /* CollaborationTMDB.app */;
+			productReference = 8119868C2CB797B600CF7CF5 /* CollaborationTMDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -457,6 +460,7 @@
 				81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */,
 				81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */,
 				81B18BA82CB556B5001979F5 /* ThumbnailTableViewCell.swift in Sources */,
+				811986902CB7A2CC00CF7CF5 /* +UIImage.swift in Sources */,
 				81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */,
 				7B5A94F72CB53A0F00F7E6A7 /* DatabaseRepository.swift in Sources */,
 				7B5A950D2CB626F100F7E6A7 /* TMDBMovieResponse.swift in Sources */,

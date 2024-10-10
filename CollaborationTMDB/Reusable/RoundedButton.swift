@@ -8,16 +8,6 @@
 import UIKit
 
 final class RoundedButton: UIButton {
-   enum ButtonImages: String {
-      case play
-      case magnifyingglass
-      case sparkles = "sparkles.tv"
-      case house
-      case playCircle = "play.circle"
-      case square = "square.and.arrow.down"
-      case face = "face.smiling"
-      case plus
-   }
    
    override init(frame: CGRect) {
       super.init(frame: frame)
@@ -28,7 +18,7 @@ final class RoundedButton: UIButton {
       backgroundColor: UIColor = .white,
       title: String,
       fontSize: CGFloat = 14.0,
-      image: ButtonImages? = nil
+      image: Icons? = nil
    ) {
       self.init(frame: .zero)
 
@@ -41,7 +31,7 @@ final class RoundedButton: UIButton {
       config.attributedTitle = AttributedString(title, attributes: titleContainer)
 
       if let image {
-         config.image = UIImage(systemName: image.rawValue)
+         config.image = image.asUIImage()
          config.imagePlacement = .leading
          config.imagePadding = 15.0
          config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(
