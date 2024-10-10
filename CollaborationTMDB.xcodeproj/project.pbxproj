@@ -14,7 +14,6 @@
 		7B5A94B82CB5259600F7E6A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B72CB5259600F7E6A7 /* Base */; };
 		7B5A94C02CB525BE00F7E6A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94BF2CB525BE00F7E6A7 /* .gitignore */; };
 		7B5A94CE2CB532A900F7E6A7 /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94CD2CB532A900F7E6A7 /* b.swift */; };
-		7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D32CB532B700F7E6A7 /* e.swift */; };
 		7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94D52CB532BB00F7E6A7 /* f.swift */; };
 		7B5A94DB2CB5380100F7E6A7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DA2CB5380100F7E6A7 /* RealmSwift */; };
 		7B5A94DE2CB5380D00F7E6A7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5A94DD2CB5380D00F7E6A7 /* Kingfisher */; };
@@ -50,6 +49,9 @@
 		81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BA92CB5580D001979F5 /* +UIView.swift */; };
 		81B18BAC2CB55882001979F5 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BAB2CB55882001979F5 /* BaseTableViewCell.swift */; };
 		81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B18BC52CB69BE5001979F5 /* HomePosterView.swift */; };
+		D42D41322CB75CA600582494 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41312CB75CA600582494 /* APIKEY.swift */; };
+		D42D41342CB75D9000582494 /* VerticalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */; };
+		D42D41362CB75DBD00582494 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +77,6 @@
 		7B5A94B92CB5259600F7E6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5A94BF2CB525BE00F7E6A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7B5A94CD2CB532A900F7E6A7 /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
-		7B5A94D32CB532B700F7E6A7 /* e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e.swift; sourceTree = "<group>"; };
 		7B5A94D52CB532BB00F7E6A7 /* f.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f.swift; sourceTree = "<group>"; };
 		7B5A94EC2CB539BC00F7E6A7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7B5A94EE2CB539CB00F7E6A7 /* TMDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBRepository.swift; sourceTree = "<group>"; };
@@ -104,7 +105,10 @@
 		81B18BA92CB5580D001979F5 /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
 		81B18BAB2CB55882001979F5 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		81B18BC52CB69BE5001979F5 /* HomePosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePosterView.swift; sourceTree = "<group>"; };
-		81E181C82CB6A6150040FAD9 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CollaborationTMDB.app; path = "/Users/hankyeol-dev/lab/ios-project/CollaborationTMDB/build/Debug-iphoneos/CollaborationTMDB.app"; sourceTree = "<absolute>"; };
+		D42D41312CB75CA600582494 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
+		D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCollectionViewCell.swift; sourceTree = "<group>"; };
+		D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		D42D41372CB78E8400582494 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CollaborationTMDB.app; path = "/Users/joh/Desktop/tmdb/build/Debug-iphoneos/CollaborationTMDB.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */,
 				7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */,
 				7B5A94B62CB5259600F7E6A7 /* LaunchScreen.storyboard */,
+				D42D41312CB75CA600582494 /* APIKEY.swift */,
 				7B5A94B92CB5259600F7E6A7 /* Info.plist */,
 			);
 			path = CollaborationTMDB;
@@ -180,7 +185,8 @@
 		7B5A94C62CB526DD00F7E6A7 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				7B5A94D32CB532B700F7E6A7 /* e.swift */,
+				D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */,
+				D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */,
 				81B18BA32CB5493B001979F5 /* RoundedButton.swift */,
 				81B18BA72CB556B5001979F5 /* ThumbnailTableViewCell.swift */,
 			);
@@ -361,7 +367,7 @@
 				7B5A94E82CB5386A00F7E6A7 /* RxSwift */,
 			);
 			productName = CollaborationTMDB;
-			productReference = 81E181C82CB6A6150040FAD9 /* CollaborationTMDB.app */;
+			productReference = D42D41372CB78E8400582494 /* CollaborationTMDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -425,6 +431,8 @@
 				81B18BAC2CB55882001979F5 /* BaseTableViewCell.swift in Sources */,
 				7B5A951D2CB62D6F00F7E6A7 /* GenreResponseDTO.swift in Sources */,
 				7B5A951B2CB62CF600F7E6A7 /* GenreRequestDTO+Mapping.swift in Sources */,
+				D42D41322CB75CA600582494 /* APIKEY.swift in Sources */,
+				D42D41342CB75D9000582494 /* VerticalCollectionViewCell.swift in Sources */,
 				7B5A95252CB62FC700F7E6A7 /* CreditRequestDTO+Mapping.swift in Sources */,
 				7B5A95172CB62C5700F7E6A7 /* TrendingMovieResponseDTO.swift in Sources */,
 				7B5A95192CB62C6000F7E6A7 /* TrendingTVResponseDTO.swift in Sources */,
@@ -442,18 +450,17 @@
 				7B5A94F92CB53A5900F7E6A7 /* ImageFileManager.swift in Sources */,
 				7B5A95272CB630E800F7E6A7 /* CreditResponseDTO.swift in Sources */,
 				7B5A94B02CB5259500F7E6A7 /* ViewController.swift in Sources */,
+				D42D41362CB75DBD00582494 /* HorizontalCollectionViewCell.swift in Sources */,
 				7B5A94EF2CB539CB00F7E6A7 /* TMDBRepository.swift in Sources */,
 				7B5A94F32CB539DD00F7E6A7 /* TMDBRouter.swift in Sources */,
 				7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */,
 				81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */,
 				81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */,
-				7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */,
 				81B18BA82CB556B5001979F5 /* ThumbnailTableViewCell.swift in Sources */,
 				81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */,
 				7B5A94F72CB53A0F00F7E6A7 /* DatabaseRepository.swift in Sources */,
 				7B5A950D2CB626F100F7E6A7 /* TMDBMovieResponse.swift in Sources */,
 				7B5A95132CB62A7E00F7E6A7 /* TrendingRequestDTO+Mapping.swift in Sources */,
-				7B5A94D42CB532B700F7E6A7 /* e.swift in Sources */,
 				7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */,
 				7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */,
 			);
