@@ -106,14 +106,14 @@ extension HomeViewController {
 extension HomeViewController {
     private func bind() {
         collectionView1.rx
-            .modelSelected(HomeMovie.self)
+            .modelSelected(HomeMedia.self)
             .bind(with: self) { owner, movie in
                 owner.viewModel.action(.movieCellTap(movie))
             }
             .disposed(by: disposeBag)
         
         collectionView2.rx
-            .modelSelected(HomeTV.self)
+            .modelSelected(HomeMedia.self)
             .bind(with: self) { owner, tv in
                 owner.viewModel.action(.tvCellTap(tv))
             }

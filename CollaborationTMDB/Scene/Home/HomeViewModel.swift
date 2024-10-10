@@ -34,13 +34,13 @@ extension HomeViewModel {
     struct Input {
         var viewDidLoad = PublishRelay<Void>()
         var randomMedia = PublishRelay<(type: MediaType, genreIds: [Int])>()
-        var movieCellTap = PublishRelay<HomeMovie>()
-        var tvCellTap = PublishRelay<HomeTV>()
+        var movieCellTap = PublishRelay<HomeMedia>()
+        var tvCellTap = PublishRelay<HomeMedia>()
     }
     
     struct Output {
-        var movieData = PublishRelay<[HomeMovie]>()
-        var tvData = PublishRelay<[HomeTV]>()
+        var movieData = PublishRelay<[HomeMedia]>()
+        var tvData = PublishRelay<[HomeMedia]>()
         var genreData = PublishRelay<String>()
     }
     
@@ -88,8 +88,8 @@ extension HomeViewModel {
     enum Action {
         case viewDidLoad
         case randomMedia(_ type: MediaType, genreIds: [Int])
-        case movieCellTap(_ movie: HomeMovie)
-        case tvCellTap(_ tv: HomeTV)
+        case movieCellTap(_ movie: HomeMedia)
+        case tvCellTap(_ tv: HomeMedia)
     }
     
     func action(_ action: Action) {

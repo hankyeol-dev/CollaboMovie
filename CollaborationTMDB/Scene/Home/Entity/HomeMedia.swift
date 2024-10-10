@@ -1,5 +1,5 @@
 //
-//  HomeMovie.swift
+//  HomeMedia.swift
 //  CollaborationTMDB
 //
 //  Created by Minjae Kim on 10/10/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeMovie {
+struct HomeMedia {
     let id: Int
     let title: String
     let posterPath: String

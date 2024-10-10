@@ -57,8 +57,8 @@ struct TMDBTVResponse: Decodable {
 }
 
 extension TMDBTVResponse {
-    func toHomeTV() -> HomeTV {
-        return HomeTV(
+    func toHomeMedia() -> HomeMedia {
+        return HomeMedia(
             id: self.id,
             title: self.name,
             posterPath: self.posterPath,

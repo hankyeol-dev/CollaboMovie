@@ -130,7 +130,7 @@ extension TMDBRepository {
 
 // MARK: HomeView
 extension TMDBRepository {
-    func requestTrendingMovie() -> Single<Result<[HomeMovie], TMDBError>> {
+    func requestTrendingMovie() -> Single<Result<[HomeMedia], TMDBError>> {
         return Single.create { [weak self] single -> Disposable in
             guard let self else {
                 single(.success(.failure(.badRequest)))
@@ -141,7 +141,7 @@ extension TMDBRepository {
             networkManager.request(.trendingMovie(dto), of: TrendingMovieResponseDTO.self) { result in
                 switch result {
                 case .success(let success):
-                    single(.success(.success(success.toHomeMovies())))
+                    single(.success(.success(success.toHomeMedias())))
                 case .failure(let failure):
                     single(.success(.failure(failure)))
                 }
@@ -151,7 +151,7 @@ extension TMDBRepository {
         }
     }
     
-    func requestTrendingTV() -> Single<Result<[HomeTV], TMDBError>> {
+    func requestTrendingTV() -> Single<Result<[HomeMedia], TMDBError>> {
         return Single.create { [weak self] single -> Disposable in
             guard let self else {
                 single(.success(.failure(.badRequest)))
@@ -162,7 +162,7 @@ extension TMDBRepository {
             networkManager.request(.trendingTV(dto), of: TrendingTVResponseDTO.self) { result in
                 switch result {
                 case .success(let success):
-                    single(.success(.success(success.toHomeTVs())))
+                    single(.success(.success(success.toHomeMedias())))
                 case .failure(let failure):
                     single(.success(.failure(failure)))
                 }
