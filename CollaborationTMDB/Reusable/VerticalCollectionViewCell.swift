@@ -42,6 +42,11 @@ extension VerticalCollectionViewCell {
     func configureData() {
         
     }
+    
+    func configureData(with movie: TMDBMovieResponseDTO) {
+        let url = URL(string: "https://image.tmdb.org/t/p/w200\(movie.posterPath)")
+        posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "popcorn.fill"))
+    }
 }
 
 // View
