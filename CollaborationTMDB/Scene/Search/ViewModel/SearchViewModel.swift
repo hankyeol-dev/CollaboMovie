@@ -14,17 +14,17 @@ final class SearchViewModel {
     let disposeBag = DisposeBag()
     
     func transform(input: Input) -> SingleOutput {
-        
         let result = input.query
             .distinctUntilChanged()
-            .flatMap { query in
-                self.requestSearchSingle(query: query, page: 1)
-                    .catch { error in
+            .flatMap { [weak self] query in
+                guard let self else { return Single<SearchMovieResponseDTO>.never() }
+                return self.requestSearchSingle(query: query, page: 1)
+                    .catch { _ in
                         return Single<SearchMovieResponseDTO>.never()
                     }
             }
             .asDriver(onErrorJustReturn: SearchMovieResponseDTO(page: 1, results: [], totalPage: 1))
-            .debug("Button Tap")
+            .debug("Query changed")
         
         return SingleOutput(movieList: result)
     }
@@ -43,10 +43,8 @@ final class SearchViewModel {
         }
         .debug("requestSearchSingle")
     }
-    
 }
  
-
 extension SearchViewModel {
     struct Input {
         let query: ControlProperty<String>
