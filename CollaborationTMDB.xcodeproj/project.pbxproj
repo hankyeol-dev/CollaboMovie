@@ -55,6 +55,7 @@
 		D42D41362CB75DBD00582494 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */; };
 		D42D41572CB7B53C00582494 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41562CB7B53C00582494 /* SearchViewController.swift */; };
 		D42D41592CB7B54500582494 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41582CB7B54500582494 /* SearchViewModel.swift */; };
+		D42D415B2CB7C28B00582494 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D415A2CB7C28B00582494 /* SearchHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,9 +113,10 @@
 		D42D41312CB75CA600582494 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCollectionViewCell.swift; sourceTree = "<group>"; };
 		D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
-		D42D41542CB7B45C00582494 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollaborationTMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42D41562CB7B53C00582494 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D42D41582CB7B54500582494 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D42D415A2CB7C28B00582494 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
+		D42D41832CB8D8C800582494 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollaborationTMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,7 @@
 			children = (
 				7B5A94BF2CB525BE00F7E6A7 /* .gitignore */,
 				7B5A94AA2CB5259500F7E6A7 /* CollaborationTMDB */,
-				D42D41542CB7B45C00582494 /* CollaborationTMDB.app */,
+				D42D41832CB8D8C800582494 /* CollaborationTMDB.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -353,10 +355,27 @@
 		D42D41552CB7B53200582494 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				D42D41562CB7B53C00582494 /* SearchViewController.swift */,
-				D42D41582CB7B54500582494 /* SearchViewModel.swift */,
+				D42D415C2CB886D200582494 /* View */,
+				D42D415D2CB886D700582494 /* ViewModel */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		D42D415C2CB886D200582494 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D42D41562CB7B53C00582494 /* SearchViewController.swift */,
+				D42D415A2CB7C28B00582494 /* SearchHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42D415D2CB886D700582494 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D42D41582CB7B54500582494 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +404,7 @@
 				7B5A94E82CB5386A00F7E6A7 /* RxSwift */,
 			);
 			productName = CollaborationTMDB;
-			productReference = D42D41542CB7B45C00582494 /* CollaborationTMDB.app */;
+			productReference = D42D41832CB8D8C800582494 /* CollaborationTMDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -481,6 +500,7 @@
 				81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */,
 				7B5A94F72CB53A0F00F7E6A7 /* DatabaseRepository.swift in Sources */,
 				7B5A950D2CB626F100F7E6A7 /* TMDBMovieResponse.swift in Sources */,
+				D42D415B2CB7C28B00582494 /* SearchHeader.swift in Sources */,
 				7B5A95132CB62A7E00F7E6A7 /* TrendingRequestDTO+Mapping.swift in Sources */,
 				7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */,
 				7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */,
