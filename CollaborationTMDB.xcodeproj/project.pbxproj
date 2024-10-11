@@ -390,7 +390,6 @@
 				7B5A94E82CB5386A00F7E6A7 /* RxSwift */,
 			);
 			productName = CollaborationTMDB;
-			productReference = 7B5A952B2CB7A57400F7E6A7 /* CollaborationTMDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
