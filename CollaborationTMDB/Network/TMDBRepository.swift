@@ -114,7 +114,12 @@ extension TMDBRepository {
       ) { result in
          switch result {
          case .success(let success):
-            successHandler(success.asDetailViewInput())
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            DispatchQueue.global().async(group: dispatchGroup) {
+               successHandler(success.asDetailViewInput())
+               dispatchGroup.leave()
+            }
          case .failure:
             errorHandler()
          }
