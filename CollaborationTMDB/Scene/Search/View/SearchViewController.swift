@@ -54,36 +54,13 @@ extension SearchViewController {
             .subscribe(with: self, onNext: { owner, movie in
                 // 디테일뷰
                 
-                
             })
-            .disposed(by: disposeBag)
-        
-        collectionView.rx.prefetchItems
-            .subscribe(with: self) { owner, indexPaths in
-                let totalItemCount = owner.collectionView.numberOfItems(inSection: 0)
-                guard let query = owner.searchBar.text else { return }
-                
-                indexPaths.forEach { indexPath in
-                    owner.viewModel
-                }
-            }
             .disposed(by: disposeBag)
     }
 }
 
 // CollectionView
 extension SearchViewController: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VerticalCollectionViewCell.id, for: indexPath) as! VerticalCollectionViewCell
-//        cell.configureData()
-//        cell.backgroundColor = .gray
-//        return cell
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else {
             return UICollectionReusableView()
@@ -93,7 +70,6 @@ extension SearchViewController: UICollectionViewDelegate {
         header.setTitle(with: "영화 & 시리즈")
         return header
     }
-    
 }
 
 extension SearchViewController {
@@ -109,7 +85,6 @@ extension SearchViewController {
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(44)
         }
-        
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom)
             make.horizontalEdges.bottom.equalToSuperview()
