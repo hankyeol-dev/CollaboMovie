@@ -52,8 +52,21 @@ extension SearchViewController {
         
         collectionView.rx.modelSelected(TMDBMovieResponseDTO.self)
             .subscribe(with: self, onNext: { owner, movie in
-                // 디테일뷰
+                let detailViewInput: DetailViewInput = .init(
+                    id: movie.id,
+                    title: movie.title,
+                    backdropPath: movie.backdropPath,
+                    voteAverage: movie.voteAverage,
+                    overview: movie.overview,
+                    mediaType: .movie)
                 
+                var targetInput = detailViewInput
+                targetInput.mapIsSavedMedia()
+                
+                let detailView = DetailViewController(
+                    detailViewModel: .init(detailViewInput: targetInput)
+                )
+                owner.present(detailView, animated: true)
             })
             .disposed(by: disposeBag)
     }
