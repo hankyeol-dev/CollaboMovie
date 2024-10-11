@@ -52,13 +52,15 @@ enum ImageFileManager {
         filename: String,
         completionHandler: @escaping (Result<String, SavePhotoError>) -> Void
     ) {
-        if let url = URL(string: urlString),
-           let data = try? Data(contentsOf: url),
-           let image = UIImage(data: data) {
-            ImageFileManager.saveImage(image: image, filename: filename)
-            completionHandler(.success(filename))
-        } else {
-            completionHandler(.failure(.save))
+        DispatchQueue.global().async {
+            if let url = URL(string: urlString),
+               let data = try? Data(contentsOf: url),
+               let image = UIImage(data: data) {
+                ImageFileManager.saveImage(image: image, filename: filename)
+                completionHandler(.success(filename))
+            } else {
+                completionHandler(.failure(.save))
+            }
         }
     }
     

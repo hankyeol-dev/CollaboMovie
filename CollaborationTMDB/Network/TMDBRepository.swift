@@ -55,54 +55,6 @@ extension TMDBRepository {
         }
     }
     
-    func requestSimilarMovie(movieId: Int) {
-        let dto = SimilarRequestDTO()
-        networkManager.request(.similarMovie(dto, movieId: movieId), of: SimilarMovieResponseDTO.self) { result in
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
-    
-    func requestSimilarTV(seriesId: Int) {
-        let dto = SimilarRequestDTO()
-        networkManager.request(.similarTV(dto, seriesId: seriesId), of: SimilarTVResponseDTO.self) { result in
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
-    
-    func requestCreditMovie(movieId: Int) {
-        let dto = CreditRequestDTO()
-        networkManager.request(.creditMovie(dto, movieId: movieId), of: CreditResponseDTO.self) { result in
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
-    
-    func requestCreditTV(seriesId: Int) {
-        let dto = CreditRequestDTO()
-        networkManager.request(.creditTV(dto, seriesId: seriesId), of: CreditResponseDTO.self) { result in
-            switch result {
-            case .success(let success):
-                print(success)
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
-    
     func requestGenreMovie() {
         let dto = GenreRequestDTO()
         networkManager.request(.genreMovie(dto), of: GenreResponseDTO.self) { result in
@@ -128,6 +80,70 @@ extension TMDBRepository {
     }
 }
 
+// MARK: DetailView에 활용하는 Credit, Similar Movie, Similar TV request
+extension TMDBRepository {
+   func requestCredit(
+      mediaId: Int,
+      mediaType: DetailViewInput.MediaType,
+      successHandler: @escaping([DetailCastAndDirect], [DetailCastAndDirect]) -> Void,
+      errorHandler: @escaping() -> Void
+   ) {
+      let dto = CreditRequestDTO()
+      networkManager.request(
+         mediaType == .movie
+         ? .creditMovie(dto, movieId: mediaId)
+         : .creditTV(dto, seriesId: mediaId),
+         of: CreditResponseDTO.self
+      ) { result in
+         switch result {
+         case .success(let success):
+            successHandler(success.toCastGroup(), success.toDirectGroup())
+         case .failure:
+            errorHandler()
+         }
+      }
+   }
+   
+   func requestSimilarMovie(
+      movieId: Int,
+      successHandler: @escaping ([DetailViewInput]) -> Void,
+      errorHandler: @escaping () -> Void
+   ) {
+      let dto = SimilarRequestDTO()
+      networkManager.request(
+         .similarMovie(dto, movieId: movieId), of: SimilarMovieResponseDTO.self
+      ) { result in
+         switch result {
+         case .success(let success):
+            let dispatchGroup = DispatchGroup()
+            dispatchGroup.enter()
+            DispatchQueue.global().async(group: dispatchGroup) {
+               successHandler(success.asDetailViewInput())
+               dispatchGroup.leave()
+            }
+         case .failure:
+            errorHandler()
+         }
+      }
+   }
+   
+   func requestSimilarTV(
+      seriesId: Int,
+      successHandler: @escaping ([DetailViewInput]) -> Void,
+      errorHandler: @escaping () -> Void
+   ) {
+      let dto = SimilarRequestDTO()
+      networkManager.request(
+         .similarTV(dto, seriesId: seriesId), of: SimilarTVResponseDTO.self) { result in
+         switch result {
+         case .success(let success):
+            successHandler(success.asDetailViewInput())
+         case .failure:
+            errorHandler()
+         }
+      }
+   }
+}
 // 서치뷰에서 영화 검색
 extension TMDBRepository {
     func requestSearch(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseDTO, TMDBError>) -> Void) {

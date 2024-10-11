@@ -16,6 +16,7 @@ enum Icons: String {
    case square = "square.and.arrow.down"
    case face = "face.smiling"
    case plus
+   case xmark
    
    func asUIImage() -> UIImage? {
       return UIImage(systemName: self.rawValue)
