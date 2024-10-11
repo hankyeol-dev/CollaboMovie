@@ -18,4 +18,10 @@ struct GenreResponseDTO: Decodable {
 
 extension GenreResponseDTO {
     // TODO: Mapping Method
+    func toGenres() -> [HomeGenre] {
+        return self.genres
+            .map {
+                HomeGenre(id: $0.id, title: $0.name)
+            }
+    }
 }
