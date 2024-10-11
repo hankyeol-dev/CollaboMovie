@@ -46,7 +46,7 @@ extension SearchViewController {
         
         output.movieList
             .drive(collectionView.rx.items(cellIdentifier: VerticalCollectionViewCell.id, cellType: VerticalCollectionViewCell.self)) { (row, movie, cell) in
-                cell.configureData(with: movie)
+                cell.configureData(movie.posterPath)
             }
             .disposed(by: disposeBag)
         

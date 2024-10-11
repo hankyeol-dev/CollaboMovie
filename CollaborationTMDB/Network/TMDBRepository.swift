@@ -134,6 +134,9 @@ extension TMDBRepository {
         let dto = SearchMovieRequestDTO(query: query, page: page)
         networkManager.request(.searchMovie(dto), of: SearchMovieResponseDTO.self) { result in
             completion(result)
+        }
+    }
+}
 
 // MARK: HomeView
 extension TMDBRepository {
