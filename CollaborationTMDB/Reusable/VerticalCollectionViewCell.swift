@@ -34,18 +34,12 @@ final class VerticalCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         
     }
-    
 }
 
 // Data
 extension VerticalCollectionViewCell {
-    func configureData() {
-        
-    }
-    
-    func configureData(with movie: TMDBMovieResponseDTO) {
-        let url = URL(string: "https://image.tmdb.org/t/p/w200\(movie.posterPath)")
-        posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "popcorn.fill"))
+    func configureData(_ path: String) {
+        posterImageView.kf.setImage(with: URL(string: ImageURL.tmdb(image: path).urlString))
     }
 }
 
