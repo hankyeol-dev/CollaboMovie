@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94AB2CB5259500F7E6A7 /* AppDelegate.swift */; };
 		7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94AD2CB5259500F7E6A7 /* SceneDelegate.swift */; };
-		7B5A94B02CB5259500F7E6A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */; };
+		7B5A94B02CB5259500F7E6A7 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5A94AF2CB5259500F7E6A7 /* MainTabbarController.swift */; };
 		7B5A94B52CB5259600F7E6A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */; };
 		7B5A94B82CB5259600F7E6A7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94B72CB5259600F7E6A7 /* Base */; };
 		7B5A94C02CB525BE00F7E6A7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7B5A94BF2CB525BE00F7E6A7 /* .gitignore */; };
@@ -86,7 +86,7 @@
 /* Begin PBXFileReference section */
 		7B5A94AB2CB5259500F7E6A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B5A94AD2CB5259500F7E6A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B5A94AF2CB5259500F7E6A7 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
 		7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B5A94B72CB5259600F7E6A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B5A94B92CB5259600F7E6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,7 +176,6 @@
 				7B5A94C62CB526DD00F7E6A7 /* Reusable */,
 				7B5A94C52CB526DA00F7E6A7 /* Scene */,
 				7B5A94C42CB526D800F7E6A7 /* Utility */,
-				7B5A94AF2CB5259500F7E6A7 /* ViewController.swift */,
 				7B5A94B42CB5259600F7E6A7 /* Assets.xcassets */,
 				7B5A94B62CB5259600F7E6A7 /* LaunchScreen.storyboard */,
 				D42D41312CB75CA600582494 /* APIKEY.swift */,
@@ -207,6 +206,7 @@
 		7B5A94C52CB526DA00F7E6A7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				811986E22CB90FF600CF7CF5 /* Tab */,
 				811986A72CB7B56000CF7CF5 /* Detail */,
 				D42D41552CB7B53200582494 /* Search */,
 				81B18BC72CB69BF6001979F5 /* Home */,
@@ -412,6 +412,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		811986E22CB90FF600CF7CF5 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				7B5A94AF2CB5259500F7E6A7 /* MainTabbarController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		81B18BC72CB69BF6001979F5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,7 +581,7 @@
 				7B5A94F92CB53A5900F7E6A7 /* ImageFileManager.swift in Sources */,
 				7B5A95272CB630E800F7E6A7 /* CreditResponseDTO.swift in Sources */,
 				811986B72CB817F700CF7CF5 /* DetailCrew.swift in Sources */,
-				7B5A94B02CB5259500F7E6A7 /* ViewController.swift in Sources */,
+				7B5A94B02CB5259500F7E6A7 /* MainTabbarController.swift in Sources */,
 				D42D41362CB75DBD00582494 /* HorizontalCollectionViewCell.swift in Sources */,
 				7B5A95402CB7B4BE00F7E6A7 /* HomeViewController.swift in Sources */,
 				7B5A94EF2CB539CB00F7E6A7 /* TMDBRepository.swift in Sources */,
