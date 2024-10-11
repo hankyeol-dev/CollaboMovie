@@ -13,4 +13,14 @@ struct SimilarMovieResponseDTO: Decodable {
 
 extension SimilarMovieResponseDTO {
     // TODO: Mapping Property
+   func asDetailViewInput() -> [DetailViewInput] {
+      results.map { .init(
+         id: $0.id, 
+         title: $0.title,
+         backdropPath: $0.backdropPath,
+         voteAverage: $0.voteAverage,
+         overview: $0.overview,
+         mediaType: .movie
+      )}
+   }
 }

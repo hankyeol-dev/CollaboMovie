@@ -95,3 +95,13 @@ struct CreditResponseDTO: Decodable {
     let cast: [Cast]
     let crew: [Crew]
 }
+
+extension CreditResponseDTO {
+   func toCastGroup() -> [DetailCastAndDirect] {
+      cast.prefix(3).map { .init(name: $0.name) }
+   }
+   
+   func toDirectGroup() -> [DetailCastAndDirect] {
+      crew.prefix(3).map { .init(name: $0.name) }
+   }
+}
