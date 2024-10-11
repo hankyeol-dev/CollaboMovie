@@ -128,6 +128,13 @@ extension TMDBRepository {
     }
 }
 
+// 서치뷰에서 영화 검색
+extension TMDBRepository {
+    func requestSearch(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseDTO, TMDBError>) -> Void) {
+        let dto = SearchMovieRequestDTO(query: query, page: page)
+        networkManager.request(.searchMovie(dto), of: SearchMovieResponseDTO.self) { result in
+            completion(result)
+
 // MARK: HomeView
 extension TMDBRepository {
     func requestTrendingMovie() -> Single<Result<[HomeMedia], TMDBError>> {

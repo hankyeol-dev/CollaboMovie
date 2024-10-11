@@ -59,6 +59,9 @@
 		D42D41322CB75CA600582494 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41312CB75CA600582494 /* APIKEY.swift */; };
 		D42D41342CB75D9000582494 /* VerticalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */; };
 		D42D41362CB75DBD00582494 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */; };
+		D42D41572CB7B53C00582494 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41562CB7B53C00582494 /* SearchViewController.swift */; };
+		D42D41592CB7B54500582494 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D41582CB7B54500582494 /* SearchViewModel.swift */; };
+		D42D415B2CB7C28B00582494 /* SearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D415A2CB7C28B00582494 /* SearchHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,6 +125,10 @@
 		D42D41312CB75CA600582494 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
 		D42D41332CB75D9000582494 /* VerticalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCollectionViewCell.swift; sourceTree = "<group>"; };
 		D42D41352CB75DBD00582494 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
+		D42D41562CB7B53C00582494 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D42D41582CB7B54500582494 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D42D415A2CB7C28B00582494 /* SearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeader.swift; sourceTree = "<group>"; };
+		D42D41832CB8D8C800582494 /* CollaborationTMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollaborationTMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +153,7 @@
 			children = (
 				7B5A94BF2CB525BE00F7E6A7 /* .gitignore */,
 				7B5A94AA2CB5259500F7E6A7 /* CollaborationTMDB */,
+				D42D41832CB8D8C800582494 /* CollaborationTMDB.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +197,7 @@
 		7B5A94C52CB526DA00F7E6A7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D42D41552CB7B53200582494 /* Search */,
 				81B18BC72CB69BF6001979F5 /* Home */,
 				7B5A954D2CB7FE7800F7E6A7 /* Like */,
 				7B5A94D52CB532BB00F7E6A7 /* f.swift */,
@@ -377,6 +386,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D42D41552CB7B53200582494 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D42D415C2CB886D200582494 /* View */,
+				D42D415D2CB886D700582494 /* ViewModel */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D42D415C2CB886D200582494 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D42D41562CB7B53C00582494 /* SearchViewController.swift */,
+				D42D415A2CB7C28B00582494 /* SearchHeader.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D42D415D2CB886D700582494 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D42D41582CB7B54500582494 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,6 +502,7 @@
 				7B5A951D2CB62D6F00F7E6A7 /* GenreResponseDTO.swift in Sources */,
 				7B5A951B2CB62CF600F7E6A7 /* GenreRequestDTO+Mapping.swift in Sources */,
 				D42D41322CB75CA600582494 /* APIKEY.swift in Sources */,
+				D42D41592CB7B54500582494 /* SearchViewModel.swift in Sources */,
 				D42D41342CB75D9000582494 /* VerticalCollectionViewCell.swift in Sources */,
 				7B5A95252CB62FC700F7E6A7 /* CreditRequestDTO+Mapping.swift in Sources */,
 				7B5A95172CB62C5700F7E6A7 /* TrendingMovieResponseDTO.swift in Sources */,
@@ -494,6 +530,7 @@
 				7B5A94EF2CB539CB00F7E6A7 /* TMDBRepository.swift in Sources */,
 				7B5A94F32CB539DD00F7E6A7 /* TMDBRouter.swift in Sources */,
 				7B5A94AC2CB5259500F7E6A7 /* AppDelegate.swift in Sources */,
+				D42D41572CB7B53C00582494 /* SearchViewController.swift in Sources */,
 				81B18BC62CB69BE5001979F5 /* HomePosterView.swift in Sources */,
 				81B18BAA2CB5580D001979F5 /* +UIView.swift in Sources */,
 				81B18BA82CB556B5001979F5 /* ThumbnailTableViewCell.swift in Sources */,
@@ -501,6 +538,7 @@
 				81B18BA42CB5493B001979F5 /* RoundedButton.swift in Sources */,
 				7B5A94F72CB53A0F00F7E6A7 /* DatabaseRepository.swift in Sources */,
 				7B5A950D2CB626F100F7E6A7 /* TMDBMovieResponse.swift in Sources */,
+				D42D415B2CB7C28B00582494 /* SearchHeader.swift in Sources */,
 				7B5A95132CB62A7E00F7E6A7 /* TrendingRequestDTO+Mapping.swift in Sources */,
 				7B5A94D62CB532BB00F7E6A7 /* f.swift in Sources */,
 				7B5A94AE2CB5259500F7E6A7 /* SceneDelegate.swift in Sources */,
