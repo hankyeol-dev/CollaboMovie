@@ -30,7 +30,7 @@ final class ThumbnailTableViewCell: BaseTableViewCell {
       return view
    }()
    private let playButton: RoundedButton = .init(
-      foregroundColor: .black,
+      foregroundColor: .white,
       backgroundColor: .clear,
       title: "",
       fontSize: 20.0,
@@ -69,4 +69,11 @@ final class ThumbnailTableViewCell: BaseTableViewCell {
       thumbnail.image = UIImage(contentsOfFile: data.path)
       titleLabel.text = data.title
    }
+}
+
+extension ThumbnailTableViewCell {
+    func configrueViewWithLocalData(_ data: MovieTable) {
+        thumbnail.image = ImageFileManager.loadImage(filename: data.imageName)
+        titleLabel.text = data.title
+    }
 }
