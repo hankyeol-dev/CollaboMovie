@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 final class TMDBRepository {
     static let shared = TMDBRepository()
@@ -142,4 +143,100 @@ extension TMDBRepository {
          }
       }
    }
+}
+// 서치뷰에서 영화 검색
+extension TMDBRepository {
+    func requestSearch(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseDTO, TMDBError>) -> Void) {
+        let dto = SearchMovieRequestDTO(query: query, page: page)
+        networkManager.request(.searchMovie(dto), of: SearchMovieResponseDTO.self) { result in
+            completion(result)
+        }
+    }
+}
+
+// MARK: HomeView
+extension TMDBRepository {
+    func requestTrendingMovie() -> Single<Result<[HomeMedia], TMDBError>> {
+        return Single.create { [weak self] single -> Disposable in
+            guard let self else {
+                single(.success(.failure(.badRequest)))
+                return Disposables.create()
+            }
+            
+            let dto = TrendingRequestDTO()
+            networkManager.request(.trendingMovie(dto), of: TrendingMovieResponseDTO.self) { result in
+                switch result {
+                case .success(let success):
+                    single(.success(.success(success.toHomeMedias())))
+                case .failure(let failure):
+                    single(.success(.failure(failure)))
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func requestTrendingTV() -> Single<Result<[HomeMedia], TMDBError>> {
+        return Single.create { [weak self] single -> Disposable in
+            guard let self else {
+                single(.success(.failure(.badRequest)))
+                return Disposables.create()
+            }
+            
+            let dto = TrendingRequestDTO()
+            networkManager.request(.trendingTV(dto), of: TrendingTVResponseDTO.self) { result in
+                switch result {
+                case .success(let success):
+                    single(.success(.success(success.toHomeMedias())))
+                case .failure(let failure):
+                    single(.success(.failure(failure)))
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func requestGenreMovie() -> Single<Result<[HomeGenre], TMDBError>> {
+        return Single.create { [weak self] single -> Disposable in
+            guard let self else {
+                single(.success(.failure(.badRequest)))
+                return Disposables.create()
+            }
+            
+            let dto = GenreRequestDTO()
+            networkManager.request(.genreMovie(dto), of: GenreResponseDTO.self) { result in
+                switch result {
+                case .success(let success):
+                    single(.success(.success(success.toGenres())))
+                case .failure(let failure):
+                    single(.success(.failure(failure)))
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func requestGenreTV() -> Single<Result<[HomeGenre], TMDBError>> {
+        return Single.create { [weak self] single -> Disposable in
+            guard let self else {
+                single(.success(.failure(.badRequest)))
+                return Disposables.create()
+            }
+            
+            let dto = GenreRequestDTO()
+            networkManager.request(.genreTV(dto), of: GenreResponseDTO.self) { result in
+                switch result {
+                case .success(let success):
+                    single(.success(.success(success.toGenres())))
+                case .failure(let failure):
+                    single(.success(.failure(failure)))
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
 }

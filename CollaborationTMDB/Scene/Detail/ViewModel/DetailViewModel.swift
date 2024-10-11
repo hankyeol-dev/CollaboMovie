@@ -176,7 +176,9 @@ extension DetailViewModel {
                      movie: .init(
                         id: detailViewInput.id,
                         title: detailViewInput.title,
-                        ImagePath: filePath
+                        imageName: filePath,
+                        overview: detailViewInput.overview ?? "",
+                        voteAverage: detailViewInput.voteAverage ?? 0.0
                      )
                   )
                }

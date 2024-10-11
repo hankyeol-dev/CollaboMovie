@@ -55,3 +55,15 @@ struct TMDBMovieResponseDTO: Decodable {
         self.voteCount = try container.decode(Int.self, forKey: .voteCount)
     }
 }
+
+extension TMDBMovieResponseDTO {
+    func toHomeMedia() -> HomeMedia {
+        return HomeMedia(
+            id: self.id,
+            title: self.title,
+            posterPath: self.posterPath,
+            backdropPath: self.backdropPath,
+            genreIds: self.genreIds
+        )
+    }
+}
