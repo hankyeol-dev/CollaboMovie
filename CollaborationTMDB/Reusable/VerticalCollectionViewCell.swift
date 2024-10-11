@@ -34,17 +34,16 @@ final class VerticalCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         
     }
-    
 }
 
 // Data
 extension VerticalCollectionViewCell {
-    func configureData() {
-        
-    }
-   
    func configureData(_ path: String) {
       posterImageView.kf.setImage(with: URL(string: ImageURL.tmdb(image: path).urlString))
+   }
+   
+   func configureData(filePath: String) {
+      posterImageView.image = ImageFileManager.loadImage(filename: filePath)
    }
    
    func configureWithoutData() {
