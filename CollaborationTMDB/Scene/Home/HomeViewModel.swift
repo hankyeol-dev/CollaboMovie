@@ -42,6 +42,8 @@ extension HomeViewModel {
         var movieData = PublishRelay<[HomeMedia]>()
         var tvData = PublishRelay<[HomeMedia]>()
         var genreData = PublishRelay<String>()
+        var movieCellTapData = PublishRelay<DetailViewInput>()
+        var tvCellTapData = PublishRelay<DetailViewInput>()
     }
     
     private func transform() {
@@ -72,13 +74,29 @@ extension HomeViewModel {
         
         input.movieCellTap
             .bind(with: self) { owner, movie in
-                print("movieCellTap")
+                var detailViewInput: DetailViewInput = .init(
+                    id: movie.id,
+                    title: movie.title,
+                    backdropPath: movie.backdropPath,
+                    voteAverage: movie.voteAverage,
+                    overview: movie.overview,
+                    mediaType: .movie)
+                detailViewInput.mapIsSavedMedia()
+                owner.output.movieCellTapData.accept(detailViewInput)
             }
             .disposed(by: disposeBag)
         
         input.tvCellTap
             .bind(with: self) { owner, tv in
-                print(tv)
+                var detailViewInput: DetailViewInput = .init(
+                    id: tv.id,
+                    title: tv.title,
+                    backdropPath: tv.backdropPath,
+                    voteAverage: tv.voteAverage,
+                    overview: tv.overview,
+                    mediaType: .tv)
+                detailViewInput.mapIsSavedMedia()
+                owner.output.movieCellTapData.accept(detailViewInput)
             }
             .disposed(by: disposeBag)
     }
