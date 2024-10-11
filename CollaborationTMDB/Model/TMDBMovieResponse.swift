@@ -63,7 +63,9 @@ extension TMDBMovieResponseDTO {
             title: self.title,
             posterPath: self.posterPath,
             backdropPath: self.backdropPath,
-            genreIds: self.genreIds
+            genreIds: self.genreIds,
+            overview: self.overview,
+            voteAverage: self.voteAverage
         )
     }
 }
