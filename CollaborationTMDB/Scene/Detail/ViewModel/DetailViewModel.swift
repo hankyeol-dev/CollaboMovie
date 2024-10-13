@@ -171,7 +171,6 @@ extension DetailViewModel {
             case let .success(filePath):
                DispatchQueue.main.async { [weak self] in
                   guard let self else { return }
-                  // TODO: DB 스키마 수정으로 -> 로직 수정 필요.
                   DatabaseRepository.addMovie(
                      movie: .init(
                         id: detailViewInput.id,
