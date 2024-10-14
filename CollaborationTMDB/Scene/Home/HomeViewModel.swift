@@ -36,6 +36,7 @@ extension HomeViewModel {
         var randomMedia = PublishRelay<(type: MediaType, genreIds: [Int])>()
         var movieCellTap = PublishRelay<HomeMedia>()
         var tvCellTap = PublishRelay<HomeMedia>()
+        var saveButtonTap = PublishRelay<HomeMedia>()
     }
     
     struct Output {
@@ -44,6 +45,7 @@ extension HomeViewModel {
         var genreData = PublishRelay<String>()
         var movieCellTapData = PublishRelay<DetailViewInput>()
         var tvCellTapData = PublishRelay<DetailViewInput>()
+        var saveButtonTap = PublishRelay<Bool>()
     }
     
     private func transform() {
@@ -99,6 +101,12 @@ extension HomeViewModel {
                 owner.output.movieCellTapData.accept(detailViewInput)
             }
             .disposed(by: disposeBag)
+        
+        input.saveButtonTap
+            .bind(with: self) { owner, media in
+                owner.addOrExistRecord(media)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -108,6 +116,7 @@ extension HomeViewModel {
         case randomMedia(_ type: MediaType, genreIds: [Int])
         case movieCellTap(_ movie: HomeMedia)
         case tvCellTap(_ tv: HomeMedia)
+        case saveButtonTap(_ media: HomeMedia)
     }
     
     func action(_ action: Action) {
@@ -120,6 +129,8 @@ extension HomeViewModel {
             input.movieCellTap.accept(movie)
         case .tvCellTap(let tv):
             input.tvCellTap.accept(tv)
+        case .saveButtonTap(let media):
+            input.saveButtonTap.accept(media)
         }
     }
 }
@@ -202,5 +213,39 @@ extension HomeViewModel {
                 print("fetchTV onDisposed")
             }
             .disposed(by: disposeBag)
+    }
+}
+
+extension HomeViewModel {
+    private func addOrExistRecord(_ media: HomeMedia) {
+        let exist = DatabaseRepository.existMovie(movieId: media.id)
+        
+        if exist {
+            output.saveButtonTap.accept(false)
+        } else {
+            ImageFileManager.addImage(
+                urlString: ImageURL.tmdb(image: media.backdropPath).urlString,
+                filename: media.title
+            ) { result in
+                switch result {
+                case let .success(filePath):
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self else { return }
+                        DatabaseRepository.addMovie(
+                            movie: .init(
+                                id: media.id,
+                                title: media.title,
+                                imageName: filePath,
+                                overview: media.overview,
+                                voteAverage: media.voteAverage
+                            )
+                        )
+                        output.saveButtonTap.accept(true)
+                    }
+                case .failure(let failure):
+                    print(failure)
+                }
+            }
+        }
     }
 }
