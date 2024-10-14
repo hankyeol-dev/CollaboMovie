@@ -141,10 +141,24 @@ extension TMDBRepository {
 }
 // 서치뷰에서 영화 검색
 extension TMDBRepository {
-    func requestSearch(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseDTO, TMDBError>) -> Void) {
-        let dto = SearchMovieRequestDTO(query: query, page: page)
-        networkManager.request(.searchMovie(dto), of: SearchMovieResponseDTO.self) { result in
-            completion(result)
+    func requestSearchMovie(query: String, page: Int) -> Single<Result<SearchResult, TMDBError>> {
+        return Single.create { [weak self] single -> Disposable in
+            guard let self else {
+                single(.success(.failure(.badRequest)))
+                return Disposables.create()
+            }
+            
+            let dto = SearchMovieRequestDTO(query: query, page: page)
+            networkManager.request(.searchMovie(dto), of: SearchMovieResponseDTO.self) { result in
+                switch result {
+                case .success(let success):
+                    single(.success(.success(success.toSearchResult())))
+                case .failure(let failure):
+                    single(.success(.failure(failure)))
+                }
+            }
+            
+            return Disposables.create()
         }
     }
 }
