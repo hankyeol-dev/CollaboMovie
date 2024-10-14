@@ -21,4 +21,16 @@ struct SearchMovieResponseDTO: Decodable {
 
 extension SearchMovieResponseDTO {
     // TODO: Mapping Property
+    func toSearchResult() -> SearchResult {
+        let result = SearchResult(page: self.page,
+                                  results: self.results.map { $0.toSearchMedia() },
+                                  totalPage: self.totalPage)
+        return result
+    }
+}
+
+struct SearchResult {
+    let page: Int
+    let results: [SearchMedia]
+    let totalPage: Int
 }

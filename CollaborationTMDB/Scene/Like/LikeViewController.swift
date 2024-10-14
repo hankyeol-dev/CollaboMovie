@@ -41,7 +41,18 @@ final class LikeViewController: UIViewController {
         
         viewModel.output.moveDetail
             .bind(with: self) { owner, media in
-                // TODO: Push or Present Detail
+                var detailViewInput: DetailViewInput = .init(
+                    id: media.id,
+                    title: media.title,
+                    backdropPath: media.imageName,
+                    voteAverage: media.voteAverage,
+                    overview: media.overview,
+                    mediaType: .movie
+                )
+                detailViewInput.mapIsSavedMedia()
+                let detailView: DetailViewController = .init(
+                    detailViewModel: .init(detailViewInput: detailViewInput))
+                owner.present(detailView, animated: true)
             }
             .disposed(by: disposeBag)
         

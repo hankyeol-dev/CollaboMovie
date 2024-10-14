@@ -148,6 +148,24 @@ extension HomeViewController {
                 owner.posterImageView.configureLabel(genreData)
             }
             .disposed(by: disposeBag)
+        
+        viewModel.output.movieCellTapData
+            .bind(with: self) { owner, detailViewInput in
+                let detailView: DetailViewController = .init(
+                    detailViewModel: .init(detailViewInput: detailViewInput)
+                )
+                owner.present(detailView, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.output.tvCellTapData
+            .bind(with: self) { owner, detailViewInput in
+                let detailView: DetailViewController = .init(
+                    detailViewModel: .init(detailViewInput: detailViewInput)
+                )
+                owner.present(detailView, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
