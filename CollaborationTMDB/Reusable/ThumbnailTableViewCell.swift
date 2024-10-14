@@ -77,3 +77,11 @@ extension ThumbnailTableViewCell {
         titleLabel.text = data.title
     }
 }
+
+// SearchView에서 검색어 없을 때 Trend Movie 보여주기
+extension ThumbnailTableViewCell {
+    func configureView(_ data: HomeMedia) {
+        thumbnail.kf.setImage(with: URL(string: ImageURL.tmdb(image: data.posterPath).urlString))
+        titleLabel.text = data.title
+    }
+}
