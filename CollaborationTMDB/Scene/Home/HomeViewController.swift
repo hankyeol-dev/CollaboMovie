@@ -136,9 +136,21 @@ extension HomeViewController {
                 if Bool.random(), let movie = data.0.randomElement() {
                     owner.posterImageView.configureView(movie.posterPath)
                     owner.viewModel.action(.randomMedia(.movie, genreIds: movie.genreIds))
+                    owner.posterImageView.posterLikeButton
+                        .rx.tap
+                        .bind(with: self) { vc, void in
+                            owner.viewModel.action(.saveButtonTap(movie))
+                        }
+                        .disposed(by: owner.disposeBag)
                 } else if let tv = data.1.randomElement() {
                     owner.posterImageView.configureView(tv.posterPath)
                     owner.viewModel.action(.randomMedia(.tv, genreIds: tv.genreIds))
+                    owner.posterImageView.posterLikeButton
+                        .rx.tap
+                        .bind(with: self) { vc, void in
+                            owner.viewModel.action(.saveButtonTap(tv))
+                        }
+                        .disposed(by: owner.disposeBag)
                 }
             }
             .disposed(by: disposeBag)
@@ -164,6 +176,17 @@ extension HomeViewController {
                     detailViewModel: .init(detailViewInput: detailViewInput)
                 )
                 owner.present(detailView, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.output.saveButtonTap
+            .bind(with: self) { owner, isSaved in
+                BaseAlertBuilder(viewController: owner)
+                    .setMessage(isSaved ? "미디어를 저장했어요." : "이미 저장된 미디어에요.")
+                    .setAction {
+                        owner.dismiss(animated: true)
+                    }
+                    .displayAlert()
             }
             .disposed(by: disposeBag)
     }

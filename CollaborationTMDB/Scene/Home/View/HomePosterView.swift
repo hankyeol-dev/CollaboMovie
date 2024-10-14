@@ -67,8 +67,8 @@ final class HomePosterView: UIView {
     }
     
     private func configureHierachy() {
-        addSubview(posterImage)
-        posterImage.addSubviews(posterGradientView, posterButtonStack, genreLable)
+        addSubviews(posterImage, posterButtonStack)
+        posterImage.addSubviews(posterGradientView, genreLable)
         posterButtonStack.addArrangedSubviews(posterPlayButton, posterLikeButton)
     }
     
@@ -77,12 +77,11 @@ final class HomePosterView: UIView {
             make.edges.equalTo(safeAreaLayoutGuide).inset(15.0)
         }
         posterButtonStack.snp.makeConstraints { make in
-            make.bottom.horizontalEdges.equalTo(posterImage.safeAreaLayoutGuide).inset(15.0)
+            make.bottom.horizontalEdges.equalTo(safeAreaLayoutGuide).inset(30.0)
             make.height.equalTo(50.0)
         }
-        
         genreLable.snp.makeConstraints { make in
-            make.bottom.equalTo(posterButtonStack.snp.top).offset(-15.0)
+            make.bottom.equalTo(posterImage.safeAreaLayoutGuide).inset(90.0)
             make.horizontalEdges.equalTo(posterImage.safeAreaLayoutGuide).inset(15.0)
         }
     }
