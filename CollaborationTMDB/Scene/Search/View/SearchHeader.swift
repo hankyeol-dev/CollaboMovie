@@ -14,6 +14,8 @@ final class SearchHeader: UICollectionReusableView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 17)
+        label.textColor = .label
+        label.text = "영화 & 시리즈"
         return label
     }()
 
@@ -30,7 +32,4 @@ final class SearchHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setTitle(with title: String) {
-        titleLabel.text = title
-    }
 }
