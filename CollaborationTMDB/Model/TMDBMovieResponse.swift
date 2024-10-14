@@ -69,3 +69,17 @@ extension TMDBMovieResponseDTO {
         )
     }
 }
+
+extension TMDBMovieResponseDTO {
+    func toSearchMedia() -> SearchMedia {
+        return SearchMedia(
+            id: self.id,
+            title: self.title,
+            posterPath: self.posterPath,
+            backdropPath: self.backdropPath,
+            genreIds: self.genreIds,
+            overview: self.overview,
+            voteAverage: self.voteAverage
+        )
+    }
+}
