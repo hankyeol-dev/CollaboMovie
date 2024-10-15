@@ -53,7 +53,6 @@ final class SearchViewController: UIViewController {
         configureTableViewHeader()
         rxBind()
     }
-    
 }
 
 // RxBind
@@ -82,6 +81,9 @@ extension SearchViewController {
             .modelSelected(HomeMedia.self)
             .bind(with: self) { owner, movie in
                 owner.viewModel.action(.trendCellTap(movie))
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    self.tableView.deselectRow(at: indexPath, animated: true)
+                }
             }
             .disposed(by: disposeBag)
         
@@ -184,13 +186,14 @@ extension SearchViewController {
             make.horizontalEdges.bottom.equalToSuperview()
         }
         noResultsLabel.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom).offset(16)
+            make.top.equalTo(searchBar.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
         }
     }
     
     private func configureUI() {
         view.backgroundColor = .systemBackground
+        navigationItem.title = "검색"
     }
     
     static func layout() -> UICollectionViewFlowLayout {

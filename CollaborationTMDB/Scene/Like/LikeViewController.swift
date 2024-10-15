@@ -61,6 +61,9 @@ final class LikeViewController: UIViewController {
         likeTableView.rx.modelSelected(MovieTable.self)
             .bind(with: self) { owner, media in
                 owner.viewModel.action(.modelSelect(media))
+                if let indexPath = owner.likeTableView.indexPathForSelectedRow {
+                    owner.likeTableView.deselectRow(at: indexPath, animated: true)
+                }
             }
             .disposed(by: disposeBag)
     }
