@@ -10,7 +10,7 @@ import SnapKit
 import Kingfisher
 
 final class VerticalCollectionViewCell: UICollectionViewCell {
-    static let id = "VerticallCollectionViewCell"
+    static let id = "VerticalCollectionViewCell"
     
     private let posterImageView: UIImageView = {
         let view = UIImageView()
