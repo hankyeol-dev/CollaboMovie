@@ -20,11 +20,6 @@
   - 실시간 영화 검색 및 상세 화면 조회
   - 나만의 미디어 관심 목록 저장/삭제
 
-**앱 구현 화면** <br />
-|1. HomeView | 2. SearchView | 3. LikelistView  | 4. MediaDetailView  |
-| -- | -- | -- | -- |
-| <img width="200" src="https://github.com/user-attachments/assets/5ccaeb3f-7708-4564-afaa-293d103e9b43" /> | <img width="200" src="https://github.com/user-attachments/assets/cfca5af0-e394-4f07-bf47-aaa4355006cd" /> | <img width="200" src="https://github.com/user-attachments/assets/9f0b8869-220a-4760-a13f-6d73a5c07ead" /> | <img width="200" src="https://github.com/user-attachments/assets/e04eed32-8c1e-404c-badd-ab8c6de03fc1" /> |
-
 <br />
 
 ## 프로젝트에서 고민한 것
@@ -32,7 +27,7 @@
 ### 1️. MVVM Input-Output 패턴 적용으로 협업 코드의 통일성 형성
 
 1️⃣ 프로젝트 전반에 MVVM 아키텍처를 적용하여 객체별 역할을 명확하게 구분지었습니다.
-- ViewController에서는 View 요소마다 발생하는 이벤트를 ViewModel에 전달하고, ViewModel에서 받은 데이터를 View에 반영하도록 구현했습니다.
+- ViewController에서는 View 요소마다 발생하는 이벤트를 ViewModel에 전달하고, ViewModel에서 받은 데이터 스트림을 View에 구독시켰습니다.
 - ViewModel에서는 입력 받은 이벤트에 따라 데이터의 흐름을 다시 View로 돌려줄 수 있는 비즈니스 로직을 관리했습니다.
 
 2️⃣ ViewModel에서는 각각 **Input, Output 라고 하는 Nested Structure를 두어 이벤트의 입력(Input)과 View에서 필요한 데이터 반환값(Output)을 방출하는데 활용**했습니다.
@@ -171,6 +166,14 @@
 | <img width="50" height="50" src="https://avatars.githubusercontent.com/u/59233161?v=4" /> | 오종우<br />([audi3m](https://github.com/audi3m)) | - CollectionView에서 재사용할 VerticalCollectionViewCell 구현 <br /> - 실시간 검색으로 영화 목록 조회하는 [SearchView](https://github.com/bdrsky2010/CollaborationTMDB/blob/main/CollaborationTMDB/Scene/Search/View/SearchViewController.swift), [ViewModel](https://github.com/bdrsky2010/CollaborationTMDB/blob/main/CollaborationTMDB/Scene/Search/ViewModel/SearchViewModel.swift) 구현 (페이지네이션 구현, 검색어 없을 시 Trending 영화 목록 테이블 뷰 노출) <br /> - pr: [reusable 뷰](https://github.com/bdrsky2010/CollaborationTMDB/pull/3), [SearchView](https://github.com/bdrsky2010/CollaborationTMDB/pull/6) |
 | <img width="50" height="50" src="https://avatars.githubusercontent.com/u/121326152?v=4" /> | 강한결<br />([hankyeol-dev](https://github.com/hankyeol-dev)) | - 재사용 가능한 PosterImageView, TableCellView 구현 <br /> - 컬랙션, 테이블 셀 터치하여 전환되는 [MediaDetailView](https://github.com/bdrsky2010/CollaborationTMDB/blob/main/CollaborationTMDB/Scene/Detail/View/DetailViewController.swift), [ViewModel](https://github.com/bdrsky2010/CollaborationTMDB/blob/main/CollaborationTMDB/Scene/Detail/ViewModel/DetailViewModel.swift) 구현 <br /> - pr: [reusable 뷰](https://github.com/bdrsky2010/CollaborationTMDB/pull/1), [MediaDetailView](https://github.com/bdrsky2010/CollaborationTMDB/pull/7), [관심 목록 저장 로직](https://github.com/bdrsky2010/CollaborationTMDB/pull/9) |
 
+
+<br />
+
+## 프로젝트 구현 화면
+
+|1. HomeView | 2. SearchView | 3. LikelistView  | 4. MediaDetailView  |
+| -- | -- | -- | -- |
+| <img width="200" src="https://github.com/user-attachments/assets/5ccaeb3f-7708-4564-afaa-293d103e9b43" /> | <img width="200" src="https://github.com/user-attachments/assets/cfca5af0-e394-4f07-bf47-aaa4355006cd" /> | <img width="200" src="https://github.com/user-attachments/assets/9f0b8869-220a-4760-a13f-6d73a5c07ead" /> | <img width="200" src="https://github.com/user-attachments/assets/e04eed32-8c1e-404c-badd-ab8c6de03fc1" /> |
 
 <br />
 
